@@ -1,0 +1,138 @@
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 99;
+  box-shadow: 0 0 10px #000;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+}
+
+#chk1 {
+  display: none;
+}
+
+i {
+  color: white;
+  cursor: pointer;
+}
+
+header .logo {
+  flex: 1;
+  color: #fff;
+  margin-left: 50px;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+header .search-box {
+  flex: 1;
+  position: relative;
+  height: 30px;
+}
+
+.search-box input {
+  position: inherit;
+  width: 85%;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: #f2f2f2;
+  border-radius: 30px;
+  color: grey;
+  font-size: 16px;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 40px;
+}
+
+.search-box input:focus {
+  width: 100%;
+  transition: 0.5s;
+  direction: left;
+}
+
+.search-box svg {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: scale(0.9);
+  background: green;
+  align-self: center;
+}
+
+.C02 {
+  flex: 2;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.C02 li {
+  list-style: none;
+}
+
+.C02 li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 15px;
+}
+
+.C02 li a:hover {
+  border-bottom: 2px solid cadetblue;
+}
+
+header .menu {
+  font-size: 2.5em;
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .search-box svg {
+    position: absolute;
+    /* top: 13px; */
+    box-shadow: #000;
+  }
+
+  .C02 {
+    position: fixed;
+    top: 100px;
+    right: -100%;
+    background: rgba(0, 0, 0, 0.5);
+    height: calc(100vh - 100px);
+    width: 30%;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.4s linear;
+  }
+
+  header .menu {
+    display: block;
+    width: 100px;
+    text-align: center;
+  }
+
+  #chk1:checked ~ .C02 {
+    right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  header .logo {
+    font-size: 10px;
+    margin-left: 8px;
+  }
+
+  header .C02 {
+    width: 100%;
+  }
+}

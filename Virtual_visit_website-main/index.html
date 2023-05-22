@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Visit</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="/navbar.css">
+</head>
+
+<body class="bg" style="background-color:#b1acacc3">
+
+  <!-- overlay -->
+  <div class="overlay" id="overlay" onclick="resetBg()"></div>
+  <!-- <nav class="navbar">
+        <img
+          src="./Images/Untitled-2.png"
+          class="brand-logo"
+          alt="Images is loading"
+        />
+        <ul class="nav-links">
+          <li class="nav-items"><a href="#">Destinations</a></li>
+          <li class="nav-items"><a href="#">Tourism</a></li>
+          <li class="nav-items"><a href="#">Virtual Tour Gateways</a></li>
+          <li class="nav-items"><a href="#">Premium</a></li>
+        </ul>
+        
+        <div class="right-container">
+          <input type="text" class="search-box" placeholder="search" />
+          <a href="index2.html" target="_blank" class="login-link">Login</a>
+        </div>
+      </nav> -->
+
+  <!-- <nav style="margin-bottom:0;" class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a style="font-weight:650;" class="navbar-brand" href="#">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a style="font-weight:650;" class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a style="font-weight:650;" class="nav-link" href="#">Contact us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a style="font-weight:650;" class="dropdown-item" href="#">Blog</a>
+            <a style="font-weight:650;" class="dropdown-item" href="#">Register yourself</a>
+            <div class="dropdown-divider"></div>
+            <a style="font-weight:650;" class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+      </ul>
+      <form action="" autocomplete="off" id="C01" class="form-inline my-2 my-lg-0">
+        <span>
+          <input id="input" class="form-control search-input mr-sm-2" type="text" placeholder="Search"
+            aria-label="Search" autofocus="autofocus" onclick="setBgToDark()">
+
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </span>
+        <ul class="list"></ul>
+      </form>
+    </div>
+  </nav> -->
+
+  <header>
+    <input type="checkbox" name="" id="chk1">
+    <div class="logo">
+        <h2>HOME</h2>
+    </div>
+    <div class="search-box">
+        <form action="" autocomplete="off">
+            <div>
+                <input type="text" name="search" id="input" placeholder="Search">
+                <!-- <button type="submit"><i class="bi bi-search"></i></button> -->
+                <svg style="padding: 11px 8px 9px 12px; color:white" xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor" class="fa fa-search" viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg>
+            </div>
+            <ul class="list"></ul>
+        </form>
+    </div>
+    <ul class="C02">
+        <li><a href="#">Destinations</a></li>
+        <li><a href="#">blogs</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">signin</i></a>
+            <a href="#">signup</i></a>
+            <!-- <a href="#"><i class="fab fa-instagram"></i></a> -->
+        </li>
+    </ul>
+    <div class="menu">
+        <label for="chk1">
+            <i style="margin-top:25px;" class="fa fa-bars"></i>
+        </label>
+    </div>
+</header>
+
+  <div onclick="resetBg()">
+
+    <div class="carousel-container">
+      <div class="carousel"></div>
+    </div>
+
+    <div class="video-card-container">
+      <div class="video-card">
+        <img src="https://iskconeducationalservices.org/HoH/wp-content/uploads/2018/03/places1.jpg"
+          class="video-card-image" alt="" />
+        <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe class="disable"
+            src="https://giphy.com/embed/3o6nUQG8jBHLCbDC1O" text-align="centre" width="380" height="170"
+            frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+      </div>
+      <div class="video-card">
+        <img src="https://www.goldenagers.in/blog/images/puri-jagannath.jpg" class="video-card-image" alt="" />
+        <div style="width:100%;height:0;padding-bottom:63%;position:relative;"><iframe class="disable"
+            src="https://giphy.com/embed/fRgR9iMG6O6ltzLxyC" width="100%" height="100%" style="position:absolute"
+            frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+      </div>
+      <div class="video-card">
+        <img src="http://ghhumakad.com/wp-content/uploads/2021/06/Ramanathaswamy-Temple-1.jpg" class="video-card-image"
+          alt="" />
+        <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe class="disable"
+            src="https://giphy.com/embed/K46Fq7kqAInKkkIetn" width="100%" height="100%" style="position:absolute"
+            frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+      </div>
+      <div class="video-card">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Great_Buddha_Statue%2C_Bodh_Gaya.jpg/1024px-Great_Buddha_Statue%2C_Bodh_Gaya.jpg"
+          class="video-card-image" alt="" />
+        <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe class="disable"
+            src="https://giphy.com/embed/iHrxyMnhuQj8WcIGC5" width="100%" height="100%" style="position:absolute"
+            frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+      </div>
+    </div>
+
+    <h1 class="title">Top Trending Indian Pilgrimage Destinations</h1>
+    <div class="movie-list">
+
+      <div class="card-container">
+        <a href="https://roundme.com/tour/892522/edit/2800618" target="_blank" alt="Loading image">
+          <div class="card">
+            <img src="./New_images/faith_centre.jpg" class="card-img" alt="" />
+            <div class="card-body">
+              <h2 class="name">Faith Centre</h2>
+              <h6 class="des">The Faith Centre is built to deliver a spiritually evocative space.</h6>
+              <button class="watchlist-btn">Go for Tour</button>
+            </div>
+          </div>
+        </a>
+        <a href="https://roundme.com/tour/893786/edit/2805042">
+          <div class="card">
+            <img
+              src="https://dynamic.tourtravelworld.com/blog_images/vaishno-devi-mandir-jammu-and-kashmir-20171214050320.jpg"
+              class="card-img" alt="" />
+            <div class="card-body">
+              <h2 class="name">Vaishno Devi</h2>
+              <h6 class="des">Vaishno Devi is Hindu goddess who is considered as Supreme Mother Goddess</h6>
+              <button class="watchlist-btn">Go for Tour</button>
+            </div>
+          </div>
+        </a>
+        <a href="https://roundme.com/tour/892570/edit/2800837" target="_blank" alt="Loading image">
+          <div class="card">
+            <img
+              src="https://thumbs.dreamstime.com/b/buddha-park-rabangla-sikkim-beautiful-huge-statue-lord-india-surrounded-himalayan-mountains-called-popular-93380529.jpg"
+              class="card-img" alt="" />
+            <div class="card-body">
+              <h2 class="name">The Buddha Park of Ravangla</h2>
+              <h6 class="des">The Buddha Park of Ravangla, also known as Tathagata Tsal</h6>
+              <button class="watchlist-btn">Go for Tour</button>
+            </div>
+          </div>
+        </a>
+        <a href="https://roundme.com/tour/893786/edit/2805037">
+          <div class="card">
+            <img src="https://www.namasteindiatrip.com/blog/wp-content/uploads/2019/04/Haridwar.jpeg" class="card-img"
+              alt="" />
+            <div class="card-body">
+              <h2 class="name">Tridev Temple</h2>
+              <h6 class="des">Varanasi is the oldest living city of the world, it being a chief centre of civilization.
+              </h6>
+              <button class="watchlist-btn">Go for Tour</button>
+            </div>
+          </div>
+        </a>
+        <a href="https://roundme.com/tour/893786/edit/2805037">
+          <div class="card">
+            <img src="https://w0.peakpx.com/wallpaper/752/672/HD-wallpaper-mahabodhi-temple-bodh-gaya-bihar-india-2021-travel.jpg" class="card-img"
+              alt="" />
+            <div class="card-body">
+              <h2 class="name">Gaya</h2>
+              <h6 class="des">It is a city of historical significance and is one of the major tourist attractions in India.
+              </h6>
+              <button class="watchlist-btn">Go for Tour</button>
+            </div>
+          </div>
+        </a>
+      <a href="https://roundme.com/tour/893786/edit/2805037">
+        <div class="card">
+          <img src="https://www.hinduwallpaper.com/uploads/12072021114929cfwk.jpg" class="card-img"
+            alt="" />
+          <div class="card-body">
+            <h2 class="name">Shri Sai Baba</h2>
+            <h6 class="des">The holy town of Shirdi in Maharashtra is synonymous with Sai Baba – the saint who was revered by followers of all religions.
+            </h6>
+            <button class="watchlist-btn">Go for Tour</button>
+          </div>
+        </div>
+      </a>
+    </a>
+    <a href="https://roundme.com/tour/893786/edit/2805037">
+      <div class="card">
+        <img src="https://media.gettyimages.com/photos/the-great-buddha-statue-in-bodhgaya-india-picture-id1133150246?k=20&m=1133150246&s=612x612&w=0&h=m7Iea6MAMF__mUJeaDGNdoroJVL7gjiZQCaQkh9JA6g=" class="card-img"
+          alt="" />
+        <div class="card-body">
+          <h2 class="name">Bodh Gaya</h2>
+          <h6 class="des">Bodh Gaya is the home of the Mahabodhi Temple, containing the Bodhi Tree, under which the Buddha attained nirvana.
+          </h6>
+          <button class="watchlist-btn">Go for Tour</button>
+        </div>
+      </div>
+    </a>
+  </a>
+  <a href="https://roundme.com/tour/893786/edit/2805037">
+    <div class="card">
+      <img src="https://content.jdmagicbox.com/comp/haridwar/q4/9999p1334.1334.171129185525.k4q4/catalogue/guru-kulbhushan-swami-haridwar-astrologers-nr64wk800v.jpg?clr=521f14" class="card-img"
+        alt="" />
+      <div class="card-body">
+        <h2 class="name">Haridwar</h2>
+        <h6 class="des"> Haridwar is the town of Gods. People wash away their sins in the sacred river of Ganges, albeit crowded city of Haridwar in Uttarakhand.
+        </h6>
+        <button class="watchlist-btn">Go for Tour</button>
+      </div>
+    </div>
+  </a>
+      </div>
+    </div>
+    <br>
+    <h1 class="title">Pilgrimage Site</h1>
+    <div class="movies-list">
+
+      <div class="card-container">
+        <a href="https://roundme.com/tour/893786/edit/2805039">
+          <div class="card">
+            <img
+              src="https://www.cleartrip.com/collections/wp-content/uploads/2018/12/meenakshi-amman-temple-493x330.jpg"
+              class="card-img" alt="" />
+            <div class="card-body">
+              <h2 class="name">Meenakshi Amman Temple</h2>
+              <h6 class="des">Historic temple located on the southern bank of Vaigai River in the temple city of Madurai
+              </h6>
+              <button class="watchlist-btn">Go for Tour</button>
+            </div>
+          </div>
+        </a>
+        <a href="https://roundme.com/tour/893786/edit/2805063">
+          <div class="card">
+            <img src="https://www.cleartrip.com/collections/wp-content/uploads/2018/12/badrinath-temple-495x330.jpg"
+              class="card-img" alt="" />
+            <div class="card-body">
+              <h2 class="name">Badrinath Temple</h2>
+              <h6 class="des"> Badrinath is located in Uttarakhand and is considered the most important of the 4 dhaams
+              </h6>
+              <button class="watchlist-btn">Go for Tour</button>
+            </div>
+          </div>
+        </a>
+        <a href="https://roundme.com/tour/893786/edit/2805030/">
+          <div class="card">
+            <img
+              src="https://res.cloudinary.com/wegowordpress/image/upload/v1614250769/bigstock-Rishikesh-India-Circa-April-329638714_tgfmw9.jpg"
+              class="card-img" alt="" />
+            <div class="card-body">
+              <h2 class="name">Rishikesh</h2>
+              <h6 class="des">The emerald Ganga, innumerable Hindu temples, and the heavy settlement of yoga centers in
+                Rishikesh</h6>
+              <button class="watchlist-btn">Go for Tour</button>
+            </div>
+          </div>
+        </a>
+        <a href="https://roundme.com/tour/893786/edit/2805030/">
+          <div class="card">
+            <img
+              src="https://www.tourmyindia.com/images/chidambaram-temple1.jpg"
+              class="card-img" alt="" />
+            <div class="card-body">
+              <h2 class="name">Chidambaram Temple</h2>
+              <h6 class="des">It is festooned with a wide spectrum of beautiful ancient temples, glittering backwaters</h6>
+              <button class="watchlist-btn">Go for Tour</button>
+            </div>
+          </div>
+        </a>
+        <a href="https://roundme.com/tour/893786/edit/2805072">
+          <div class="card">
+            <img
+              src="https://lh4.googleusercontent.com/GFFWdhYCH0yF1mD6db0uQbLlQzJ9fnpiPJFvLglVoZHZiCZY6XXkQomx7EkF8M5z6D96Oh33z0WUqY4HS08669jS1QiAOEjYgN-4OqQtugZTMgQ_O31Grixr6RMktZftC3MnphE"
+              class="card-img" alt="" />
+            <div class="card-body">
+              <h2 class="name">Venkateswara Temple</h2>
+              <h6 class="des">Venkateswara Temple of Tirupati is one of the famous places in India</h6>
+              <button class="watchlist-btn">Go for Tour</button>
+            </div>
+          </div>
+        </a>
+        <a href="https://roundme.com/tour/893786/edit/2805072">
+          <div class="card">
+            <img
+              src="https://lh5.googleusercontent.com/oukM7c5P03_nspgmPIPseXc3oP6d7ZfpamOK1neKPfHwZkPcaH2g03Mhyt0TZep4Ym5ODbLSsdEL0t4tN5VdjANppVvAuFgkXe_pXt7wjb0AoZbD1Pw3i-vr8iSklYpfMPwH22Q"
+              class="card-img" alt="" />
+            <div class="card-body">
+              <h2 class="name">Jagannath Temple</h2>
+              <h6 class="des">The main deities of Puri Jagannath Temple are Lord Jagannath, Balabhadra and Goddess Subhadra.</h6>
+              <button class="watchlist-btn">Go for Tour</button>
+            </div>
+          </div>
+        </a>
+        <a href="https://roundme.com/tour/893786/edit/2805072">
+          <div class="card">
+            <img
+              src="https://lh5.googleusercontent.com/yjEYl-I_AEgvFnVIiG67eSyc958pPUGpTbN-r5PzFgUpT-fSbLDjkeYznuyZ691-zO877en_N2vbw1_zvnYxek0BeSHmfJ_x1BPtqxLSCKOw2XqZY5NllscdwZIbCCKvunPmdhc"
+              class="card-img" alt="" />
+            <div class="card-body">
+              <h2 class="name">Somnath Jyotirlinga</h2>
+              <h6 class="des">Somnath Jyotirlinga is the first of the 12 Jyotirlinga of Lord Shiva included in the religious places of India. </h6>
+              <button class="watchlist-btn">Go for Tour</button>
+            </div>
+          </div>
+        </a>
+        <a href="https://roundme.com/tour/893786/edit/2805072">
+          <div class="card">
+            <img
+              src="https://lh5.googleusercontent.com/lJuyxFl4H5kfi0xjUGNZQj0qFkfBmNmhxq3-hijk9x1XeA3Oj2pcEBxTGr_uKjGWI9G1fPbSxYpJYT2rcN7d4D-IEGewDLI0X17RulF5JZPlwn6B-VMQZgc2pVVbbC_2DtT8yng"
+              class="card-img" alt="" />
+            <div class="card-body">
+              <h2 class="name">Sabarimala Mandir</h2>
+              <h6 class="des">Sabarimala is a prominent temple among the famous temples of India. More than 30 lakh pilgrims visit the Sabarimala temple</h6>
+              <button class="watchlist-btn">Go for Tour</button>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <script src="/index.js" async></script>
+
+    <section class="video">
+      <!-- <p>
+      <iframe muted autoplay loop allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/IsTqSOpmLLA" width="560"></iframe>
+    </p> -->
+      <h1>LIVE ARTI</h1>
+
+      <div class="arti-container">
+        <div class="arti-card">
+          <!-- <img src="https://i.ytimg.com/vi/XP_YV0smths/maxresdefault.jpg" class="arti-card-image" alt="" /> -->
+          <video muted controls loop autoplay src="videoplayback.mp4" class="arti-video">
+            <!-- <source src="https://www.youtube.com/watch?v=qt6PC5uMLwY" type="video/mp4"> -->
+              your browser does not support the formate
+          </video>
+        </div>
+      </div>
+      <div class="live">
+        Want to watch live Arti <br> click here : <a href="https://www.youtube.com/embed/IsTqSOpmLLA">Live Arti</a>
+      </div>
+    </section>
+  </div>
+
+  <br>
+  <br>
+
+  <link rel="stylesheet" href="style.css" />
+  <footer style="margin-bottom: 20px;" class="footer-outer cf">
+    <div class="container cf">
+      <div class="footer-box hide-acco">
+        <h3>In The Main Section</h3>
+        <ul class="drop">
+          <li><a href="#">Top Travel Destinations<sup>New</sup></a></li>
+          <li><a href="#">Package Tours</a></li>
+          <li><a href="#">Fixed Departure Tours</a></li>
+          <li><a href="#">Top Tourist Attractions of India</a></li>
+          <li><a href="#">States of India</a></li>
+          <li><a href="#">Corporate Tour</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#" target="_blank">Kumbh Mela-2021</a></li>
+        </ul>
+      </div>
+      <div class="footer-box hide-acco">
+        <h3>Legal Policy</h3>
+        <ul class="drop">
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Disclaimer</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">We are Hiring</a></li>
+          <li><a href="#">Share Your Travel Experience</a></li>
+        </ul>
+      </div>
+      <div class="footer-box footer-box1">
+        <div class="socal-media">
+          <h3 class="class2">Social Media</h3>
+          <ul class="drop">
+            <li><a href="#"> <img class="class1" src="https://www.svgrepo.com/show/330401/facebook.svg"
+                  alt="Loading Images"> </a></li>
+            <li><a href="#"> <img class="class1" src="/New_images/instagram.svg" alt="Loading Images"> </a></li>
+            <li><a href="#"> <img class="class1" src="https://www.svgrepo.com/show/922/linkedin.svg"
+                  alt="Loading Images"> </a></li>
+            <li><a href="#"> <img class="class1" src="/New_images/pinterest.svg" alt="Loading Images"> </a></li>
+            <li><a href="#"> <img class="class1" src="https://www.svgrepo.com/show/56784/twitter.svg"
+                  alt="Loading Images"> </a></li>
+            <li><a href="#"> <img class="class1" src="/New_images/youtube.svg" alt="Loading Images"> </a></li>
+          </ul>
+        </div>
+      </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <script src="/search.js"></script>
+
+  <script type="text/javascript">
+    function setBgToDark() {
+      document.getElementById("overlay").style.opacity = "0.5";
+    }
+
+    function resetBg() {
+      document.getElementById("overlay").style.opacity = "0.1";
+    }
+  </script>
+
+  <script type="text/javascript" src="vanilla-tilt.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".card,.card-body"),
+      {
+        max: 35,
+        speed: 400,
+        scale: 1.2,
+      });
+  </script>
+</body>
+
+</html>
